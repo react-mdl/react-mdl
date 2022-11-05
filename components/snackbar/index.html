@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+ <html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/><title>Snackbar | React-MDL: React Components for Material Design Lite</title><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/><script src="https://unpkg.com/dialog-polyfill/dialog-polyfill.js"></script><link rel="stylesheet" type="text/css" href="https://unpkg.com/dialog-polyfill/dialog-polyfill.css"/><link rel="stylesheet" href="/react-mdl/styles.css"/></head><body><div id="react-mount"><div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" style="z-index:100001;" data-reactroot="" data-reactid="1" data-react-checksum="-1289508620"><div class="mdl-layout__inner-container" data-reactid="2"><header class="mdl-layout__header" data-reactid="3"><div class="mdl-layout__header-row" data-reactid="4"><span class="mdl-layout-title" data-reactid="5"><a style="color:#fff;text-decoration:none;" href="/react-mdl/" data-reactid="6">React-MDL</a></span><div class="mdl-layout-spacer" data-reactid="7"></div><nav class="mdl-navigation" data-reactid="8"><a class="mdl-navigation__link" href="/react-mdl/components/" data-reactid="9">Components</a><a class="mdl-navigation__link" href="/react-mdl/templates/" data-reactid="10">Templates</a><a href="https://github.com/react-mdl/react-mdl" class="mdl-navigation__link" data-reactid="11"><i class="material-icons" style="margin-right:8px;vertical-align:middle;" data-reactid="12">link</i><!-- react-text: 13 -->GitHub<!-- /react-text --></a></nav></div></header><div class="mdl-layout__content mdl-color-text--grey-600 mdl-color--grey-50" data-reactid="14"><div class="mdl-grid mdl-grid--no-spacing" data-reactid="15"><div class="mdl-cell mdl-cell--12-col" data-reactid="16"><div class="mdl-grid mdl-grid--no-spacing" data-reactid="17"><aside class="mdl-cell mdl-cell--2-col sidebar-components mdl-shadow--4dp" data-reactid="18"><ul class="mdl-list" data-reactid="19"><li class="mdl-list__item" data-reactid="20"><a href="/react-mdl/components/badge/" data-reactid="21">Badge</a></li><li class="mdl-list__item" data-reactid="22"><a href="/react-mdl/components/button/" data-reactid="23">Buttons</a></li><li class="mdl-list__item" data-reactid="24"><a href="/react-mdl/components/card/" data-reactid="25">Cards</a></li><li class="mdl-list__item" data-reactid="26"><a href="/react-mdl/components/checkbox/" data-reactid="27">Checkbox</a></li><li class="mdl-list__item" data-reactid="28"><a href="/react-mdl/components/chip/" data-reactid="29">Chip</a></li><li class="mdl-list__item" data-reactid="30"><a href="/react-mdl/components/datatable/" data-reactid="31">DataTable</a></li><li class="mdl-list__item" data-reactid="32"><a href="/react-mdl/components/dialog/" data-reactid="33">Dialog</a></li><li class="mdl-list__item" data-reactid="34"><a href="/react-mdl/components/grid/" data-reactid="35">Grid</a></li><li class="mdl-list__item" data-reactid="36"><a href="/react-mdl/components/icon-toggle/" data-reactid="37">Icon Toggle</a></li><li class="mdl-list__item" data-reactid="38"><a href="/react-mdl/components/layout/" data-reactid="39">Layout</a></li><li class="mdl-list__item" data-reactid="40"><a href="/react-mdl/components/list/" data-reactid="41">List</a></li><li class="mdl-list__item" data-reactid="42"><a href="/react-mdl/components/menu/" data-reactid="43">Menu</a></li><li class="mdl-list__item" data-reactid="44"><a href="/react-mdl/components/progress-bar/" data-reactid="45">Progress Bar</a></li><li class="mdl-list__item" data-reactid="46"><a href="/react-mdl/components/radio-button/" data-reactid="47">Radio Button</a></li><li class="mdl-list__item" data-reactid="48"><a href="/react-mdl/components/slider/" data-reactid="49">Slider</a></li><li class="mdl-list__item" data-reactid="50"><a href="/react-mdl/components/snackbar/" data-reactid="51">Snackbar</a></li><li class="mdl-list__item" data-reactid="52"><a href="/react-mdl/components/spinner/" data-reactid="53">Spinner</a></li><li class="mdl-list__item" data-reactid="54"><a href="/react-mdl/components/switch/" data-reactid="55">Switch</a></li><li class="mdl-list__item" data-reactid="56"><a href="/react-mdl/components/tabs/" data-reactid="57">Tabs</a></li><li class="mdl-list__item" data-reactid="58"><a href="/react-mdl/components/textfield/" data-reactid="59">Textfield</a></li><li class="mdl-list__item" data-reactid="60"><a href="/react-mdl/components/tooltip/" data-reactid="61">Tooltip</a></li></ul></aside><div class="mdl-cell mdl-cell--10-col" data-reactid="62"><div class="markdown" data-reactid="63"><h1 data-reactid="64">Snackbar</h1><div data-reactid="65"><h2>Demo</h2>
+<div id="demo-109"></div>
+        <script class="demo-js">
+        'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+{/* Example of a snackbar */}
+
+var Demo = function (_React$Component) {
+  _inherits(Demo, _React$Component);
+
+  function Demo(props) {
+    _classCallCheck(this, Demo);
+
+    var _this = _possibleConstructorReturn(this, (Demo.__proto__ || Object.getPrototypeOf(Demo)).call(this, props));
+
+    _this.handleShowSnackbar = _this.handleShowSnackbar.bind(_this);
+    _this.handleTimeoutSnackbar = _this.handleTimeoutSnackbar.bind(_this);
+    _this.handleClickActionSnackbar = _this.handleClickActionSnackbar.bind(_this);
+    _this.state = { isSnackbarActive: false };
+    return _this;
+  }
+
+  _createClass(Demo, [{
+    key: 'handleShowSnackbar',
+    value: function handleShowSnackbar() {
+      this.setState({
+        isSnackbarActive: true,
+        btnBgColor: '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16)
+      });
+    }
+  }, {
+    key: 'handleTimeoutSnackbar',
+    value: function handleTimeoutSnackbar() {
+      this.setState({ isSnackbarActive: false });
+    }
+  }, {
+    key: 'handleClickActionSnackbar',
+    value: function handleClickActionSnackbar() {
+      this.setState({
+        btnBgColor: ''
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _state = this.state,
+          btnBgColor = _state.btnBgColor,
+          isSnackbarActive = _state.isSnackbarActive;
+
+      return React.createElement(
+        'div',
+        null,
+        React.createElement(
+          Button,
+          { raised: true, style: { backgroundColor: btnBgColor }, onClick: this.handleShowSnackbar },
+          'Show a Snackbar'
+        ),
+        React.createElement(
+          Snackbar,
+          {
+            active: isSnackbarActive,
+            onClick: this.handleClickActionSnackbar,
+            onTimeout: this.handleTimeoutSnackbar,
+            action: 'Undo' },
+          'Button color changed.'
+        )
+      );
+    }
+  }]);
+
+  return Demo;
+}(React.Component);
+        var elem = React.createElement(Demo);
+        var cont = document.getElementById("demo-109");
+        ReactDOM.render(elem, cont);
+    </script><pre class="language-jsx"><code class="language-jsx"><span class="token punctuation" >{</span><span class="token comment" spellcheck="true">/* Example of a snackbar */</span><span class="token punctuation" >}</span>
+<span class="token keyword" >class</span> <span class="token class-name" >Demo</span> <span class="token keyword" >extends</span> <span class="token class-name" >React<span class="token punctuation" >.</span>Component</span> <span class="token punctuation" >{</span>
+  <span class="token function" >constructor</span><span class="token punctuation" >(</span>props<span class="token punctuation" >)</span> <span class="token punctuation" >{</span>
+    <span class="token keyword" >super</span><span class="token punctuation" >(</span>props<span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+    <span class="token keyword" >this</span><span class="token punctuation" >.</span>handleShowSnackbar <span class="token operator" >=</span> <span class="token keyword" >this</span><span class="token punctuation" >.</span>handleShowSnackbar<span class="token punctuation" >.</span><span class="token function" >bind</span><span class="token punctuation" >(</span><span class="token keyword" >this</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+    <span class="token keyword" >this</span><span class="token punctuation" >.</span>handleTimeoutSnackbar <span class="token operator" >=</span> <span class="token keyword" >this</span><span class="token punctuation" >.</span>handleTimeoutSnackbar<span class="token punctuation" >.</span><span class="token function" >bind</span><span class="token punctuation" >(</span><span class="token keyword" >this</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+    <span class="token keyword" >this</span><span class="token punctuation" >.</span>handleClickActionSnackbar <span class="token operator" >=</span> <span class="token keyword" >this</span><span class="token punctuation" >.</span>handleClickActionSnackbar<span class="token punctuation" >.</span><span class="token function" >bind</span><span class="token punctuation" >(</span><span class="token keyword" >this</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+    <span class="token keyword" >this</span><span class="token punctuation" >.</span>state <span class="token operator" >=</span> <span class="token punctuation" >{</span> isSnackbarActive<span class="token punctuation" >:</span> <span class="token boolean" >false</span> <span class="token punctuation" >}</span><span class="token punctuation" >;</span>
+  <span class="token punctuation" >}</span>
+
+  <span class="token function" >handleShowSnackbar</span><span class="token punctuation" >(</span><span class="token punctuation" >)</span> <span class="token punctuation" >{</span>
+    <span class="token keyword" >this</span><span class="token punctuation" >.</span><span class="token function" >setState</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span>
+      isSnackbarActive<span class="token punctuation" >:</span> <span class="token boolean" >true</span><span class="token punctuation" >,</span>
+      btnBgColor<span class="token punctuation" >:</span> <span class="token string" >'#'</span> <span class="token operator" >+</span>
+        Math<span class="token punctuation" >.</span><span class="token function" >floor</span><span class="token punctuation" >(</span>Math<span class="token punctuation" >.</span><span class="token function" >random</span><span class="token punctuation" >(</span><span class="token punctuation" >)</span> <span class="token operator" >*</span> <span class="token number" >0xFFFFFF</span><span class="token punctuation" >)</span><span class="token punctuation" >.</span><span class="token function" >toString</span><span class="token punctuation" >(</span><span class="token number" >16</span><span class="token punctuation" >)</span>
+    <span class="token punctuation" >}</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+  <span class="token punctuation" >}</span>
+  <span class="token function" >handleTimeoutSnackbar</span><span class="token punctuation" >(</span><span class="token punctuation" >)</span> <span class="token punctuation" >{</span>
+    <span class="token keyword" >this</span><span class="token punctuation" >.</span><span class="token function" >setState</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span> isSnackbarActive<span class="token punctuation" >:</span> <span class="token boolean" >false</span> <span class="token punctuation" >}</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+  <span class="token punctuation" >}</span>
+  <span class="token function" >handleClickActionSnackbar</span><span class="token punctuation" >(</span><span class="token punctuation" >)</span> <span class="token punctuation" >{</span>
+    <span class="token keyword" >this</span><span class="token punctuation" >.</span><span class="token function" >setState</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span>
+      btnBgColor<span class="token punctuation" >:</span> <span class="token string" >''</span>
+    <span class="token punctuation" >}</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+  <span class="token punctuation" >}</span>
+  <span class="token function" >render</span><span class="token punctuation" >(</span><span class="token punctuation" >)</span> <span class="token punctuation" >{</span>
+    <span class="token keyword" >const</span> <span class="token punctuation" >{</span> btnBgColor<span class="token punctuation" >,</span> isSnackbarActive <span class="token punctuation" >}</span> <span class="token operator" >=</span> <span class="token keyword" >this</span><span class="token punctuation" >.</span>state<span class="token punctuation" >;</span>
+    <span class="token keyword" >return</span> <span class="token punctuation" >(</span>
+      <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>div</span><span class="token punctuation" >></span></span>
+        <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Button</span> <span class="token attr-name" >raised</span> <span class="token attr-name" >style</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token punctuation" >{</span>backgroundColor<span class="token punctuation" >:</span> btnBgColor<span class="token punctuation" >}</span><span class="token punctuation" >}</span></span> <span class="token attr-name" >onClick</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token keyword" >this</span><span class="token punctuation" >.</span>handleShowSnackbar<span class="token punctuation" >}</span></span><span class="token punctuation" >></span></span>Show a Snackbar<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Button</span><span class="token punctuation" >></span></span>
+        <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Snackbar</span>
+          <span class="token attr-name" >active</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span>isSnackbarActive<span class="token punctuation" >}</span></span>
+          <span class="token attr-name" >onClick</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token keyword" >this</span><span class="token punctuation" >.</span>handleClickActionSnackbar<span class="token punctuation" >}</span></span>
+          <span class="token attr-name" >onTimeout</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token keyword" >this</span><span class="token punctuation" >.</span>handleTimeoutSnackbar<span class="token punctuation" >}</span></span>
+          <span class="token attr-name" >action</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>Undo<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span>Button color changed<span class="token punctuation" >.</span><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Snackbar</span><span class="token punctuation" >></span></span>
+      <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>div</span><span class="token punctuation" >></span></span>
+    <span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+  <span class="token punctuation" >}</span>
+<span class="token punctuation" >}</span>
+</code><form class="codepen" action="http://codepen.io/pen/define" method="POST" target="_blank">
+<input type="hidden" name="data" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\&​quot;demo\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;// export the React MDL components globally to use them without the ReactMDL prefix\nfor(const component in ReactMDL) {\n    if(ReactMDL.hasOwnProperty(component)) {\n        window[component] = ReactMDL[component];\n    }\n}\n// for the dialog example, we have to register the dialogs window\nconst dialogs = document.querySelector(\&​quot;dialog\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\n{/* Example of a snackbar */}\nclass Demo extends React.Component {\n  constructor(props) {\n    super(props);\n    this.handleShowSnackbar = this.handleShowSnackbar.bind(this);\n    this.handleTimeoutSnackbar = this.handleTimeoutSnackbar.bind(this);\n    this.handleClickActionSnackbar = this.handleClickActionSnackbar.bind(this);\n    this.state = { isSnackbarActive: false };\n  }\n\n  handleShowSnackbar() {\n    this.setState({\n      isSnackbarActive: true,\n      btnBgColor: &apos;#&apos; +\n        Math.floor(Math.random() * 0xFFFFFF).toString(16)\n    });\n  }\n  handleTimeoutSnackbar() {\n    this.setState({ isSnackbarActive: false });\n  }\n  handleClickActionSnackbar() {\n    this.setState({\n      btnBgColor: &apos;&apos;\n    });\n  }\n  render() {\n    const { btnBgColor, isSnackbarActive } = this.state;\n    return (\n      <div>\n        <Button raised style={{backgroundColor: btnBgColor}} onClick={this.handleShowSnackbar}>Show a Snackbar</Button>\n        <Snackbar\n          active={isSnackbarActive}\n          onClick={this.handleClickActionSnackbar}\n          onTimeout={this.handleTimeoutSnackbar}\n          action=\&​quot;Undo\&​quot;>Button color changed.</Snackbar>\n      </div>\n    );\n  }\n}\n\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://unpkg.com/react-mdl/extra/material.css;https://unpkg.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://unpkg.com/react/dist/react.js;https://unpkg.com/react-dom/dist/react-dom.js;https://unpkg.com/react-mdl/extra/material.js;https://unpkg.com/react-mdl/out/ReactMDL.js;https://unpkg.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>
+<input type="image" src="http://s.cdpn.io/3/cp-arrow-right.svg" width="40" height="40" value="Create New Pen with Prefilled Data" class="codepen-mover-button">
+</form></pre><div id="demo-110"></div>
+        <script class="demo-js">
+        var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+{/* Example of a toast (snackbar without action button) */}
+
+var Demo = function (_React$Component) {
+  _inherits(Demo, _React$Component);
+
+  function Demo(props) {
+    _classCallCheck(this, Demo);
+
+    var _this = _possibleConstructorReturn(this, (Demo.__proto__ || Object.getPrototypeOf(Demo)).call(this, props));
+
+    _this.handleShowSnackbar = _this.handleShowSnackbar.bind(_this);
+    _this.handleTimeoutSnackbar = _this.handleTimeoutSnackbar.bind(_this);
+    _this.state = { isSnackbarActive: false };
+    return _this;
+  }
+
+  _createClass(Demo, [{
+    key: "handleShowSnackbar",
+    value: function handleShowSnackbar() {
+      this.setState({ isSnackbarActive: true });
+    }
+  }, {
+    key: "handleTimeoutSnackbar",
+    value: function handleTimeoutSnackbar() {
+      this.setState({ isSnackbarActive: false });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var isSnackbarActive = this.state.isSnackbarActive;
+
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          Button,
+          { raised: true, onClick: this.handleShowSnackbar },
+          "Show a Toast"
+        ),
+        React.createElement(
+          Snackbar,
+          {
+            active: isSnackbarActive,
+            onTimeout: this.handleTimeoutSnackbar },
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius luctus quam. Fusce quis blandit libero. Donec accumsan nunc lectus, vel blandit diam bibendum ac. Integer faucibus, lorem et convallis fermentum, diam dolor imperdiet mi, nec iaculis risus mauris id elit. Vivamus vel eros dapibus, molestie ante ut, vestibulum sem."
+        )
+      );
+    }
+  }]);
+
+  return Demo;
+}(React.Component);
+        var elem = React.createElement(Demo);
+        var cont = document.getElementById("demo-110");
+        ReactDOM.render(elem, cont);
+    </script><pre class="language-jsx"><code class="language-jsx"><span class="token punctuation" >{</span><span class="token comment" spellcheck="true">/* Example of a toast (snackbar without action button) */</span><span class="token punctuation" >}</span>
+<span class="token keyword" >class</span> <span class="token class-name" >Demo</span> <span class="token keyword" >extends</span> <span class="token class-name" >React<span class="token punctuation" >.</span>Component</span> <span class="token punctuation" >{</span>
+  <span class="token function" >constructor</span><span class="token punctuation" >(</span>props<span class="token punctuation" >)</span> <span class="token punctuation" >{</span>
+    <span class="token keyword" >super</span><span class="token punctuation" >(</span>props<span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+    <span class="token keyword" >this</span><span class="token punctuation" >.</span>handleShowSnackbar <span class="token operator" >=</span> <span class="token keyword" >this</span><span class="token punctuation" >.</span>handleShowSnackbar<span class="token punctuation" >.</span><span class="token function" >bind</span><span class="token punctuation" >(</span><span class="token keyword" >this</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+    <span class="token keyword" >this</span><span class="token punctuation" >.</span>handleTimeoutSnackbar <span class="token operator" >=</span> <span class="token keyword" >this</span><span class="token punctuation" >.</span>handleTimeoutSnackbar<span class="token punctuation" >.</span><span class="token function" >bind</span><span class="token punctuation" >(</span><span class="token keyword" >this</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+    <span class="token keyword" >this</span><span class="token punctuation" >.</span>state <span class="token operator" >=</span> <span class="token punctuation" >{</span> isSnackbarActive<span class="token punctuation" >:</span> <span class="token boolean" >false</span> <span class="token punctuation" >}</span><span class="token punctuation" >;</span>
+  <span class="token punctuation" >}</span>
+
+  <span class="token function" >handleShowSnackbar</span><span class="token punctuation" >(</span><span class="token punctuation" >)</span> <span class="token punctuation" >{</span>
+    <span class="token keyword" >this</span><span class="token punctuation" >.</span><span class="token function" >setState</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span> isSnackbarActive<span class="token punctuation" >:</span> <span class="token boolean" >true</span> <span class="token punctuation" >}</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+  <span class="token punctuation" >}</span>
+  <span class="token function" >handleTimeoutSnackbar</span><span class="token punctuation" >(</span><span class="token punctuation" >)</span> <span class="token punctuation" >{</span>
+    <span class="token keyword" >this</span><span class="token punctuation" >.</span><span class="token function" >setState</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span> isSnackbarActive<span class="token punctuation" >:</span> <span class="token boolean" >false</span> <span class="token punctuation" >}</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+  <span class="token punctuation" >}</span>
+  <span class="token function" >render</span><span class="token punctuation" >(</span><span class="token punctuation" >)</span> <span class="token punctuation" >{</span>
+    <span class="token keyword" >const</span> <span class="token punctuation" >{</span> isSnackbarActive <span class="token punctuation" >}</span> <span class="token operator" >=</span> <span class="token keyword" >this</span><span class="token punctuation" >.</span>state<span class="token punctuation" >;</span>
+    <span class="token keyword" >return</span> <span class="token punctuation" >(</span>
+      <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>div</span><span class="token punctuation" >></span></span>
+        <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Button</span> <span class="token attr-name" >raised</span> <span class="token attr-name" >onClick</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token keyword" >this</span><span class="token punctuation" >.</span>handleShowSnackbar<span class="token punctuation" >}</span></span><span class="token punctuation" >></span></span>Show a Toast<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Button</span><span class="token punctuation" >></span></span>
+        <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Snackbar</span>
+          <span class="token attr-name" >active</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span>isSnackbarActive<span class="token punctuation" >}</span></span>
+          <span class="token attr-name" >onTimeout</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token keyword" >this</span><span class="token punctuation" >.</span>handleTimeoutSnackbar<span class="token punctuation" >}</span></span><span class="token punctuation" >></span></span>
+            Lorem ipsum dolor sit amet<span class="token punctuation" >,</span> consectetur adipiscing elit<span class="token punctuation" >.</span> Fusce varius luctus quam<span class="token punctuation" >.</span> Fusce quis blandit libero<span class="token punctuation" >.</span> Donec accumsan nunc lectus<span class="token punctuation" >,</span> vel blandit diam bibendum ac<span class="token punctuation" >.</span> Integer faucibus<span class="token punctuation" >,</span> lorem et convallis fermentum<span class="token punctuation" >,</span> diam dolor imperdiet mi<span class="token punctuation" >,</span> nec iaculis risus mauris id elit<span class="token punctuation" >.</span> Vivamus vel eros dapibus<span class="token punctuation" >,</span> molestie ante ut<span class="token punctuation" >,</span> vestibulum sem<span class="token punctuation" >.</span>
+          <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Snackbar</span><span class="token punctuation" >></span></span>
+      <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>div</span><span class="token punctuation" >></span></span>
+    <span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+  <span class="token punctuation" >}</span>
+<span class="token punctuation" >}</span>
+</code><form class="codepen" action="http://codepen.io/pen/define" method="POST" target="_blank">
+<input type="hidden" name="data" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\&​quot;demo\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;// export the React MDL components globally to use them without the ReactMDL prefix\nfor(const component in ReactMDL) {\n    if(ReactMDL.hasOwnProperty(component)) {\n        window[component] = ReactMDL[component];\n    }\n}\n// for the dialog example, we have to register the dialogs window\nconst dialogs = document.querySelector(\&​quot;dialog\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\n{/* Example of a toast (snackbar without action button) */}\nclass Demo extends React.Component {\n  constructor(props) {\n    super(props);\n    this.handleShowSnackbar = this.handleShowSnackbar.bind(this);\n    this.handleTimeoutSnackbar = this.handleTimeoutSnackbar.bind(this);\n    this.state = { isSnackbarActive: false };\n  }\n\n  handleShowSnackbar() {\n    this.setState({ isSnackbarActive: true });\n  }\n  handleTimeoutSnackbar() {\n    this.setState({ isSnackbarActive: false });\n  }\n  render() {\n    const { isSnackbarActive } = this.state;\n    return (\n      <div>\n        <Button raised onClick={this.handleShowSnackbar}>Show a Toast</Button>\n        <Snackbar\n          active={isSnackbarActive}\n          onTimeout={this.handleTimeoutSnackbar}>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius luctus quam. Fusce quis blandit libero. Donec accumsan nunc lectus, vel blandit diam bibendum ac. Integer faucibus, lorem et convallis fermentum, diam dolor imperdiet mi, nec iaculis risus mauris id elit. Vivamus vel eros dapibus, molestie ante ut, vestibulum sem.\n          </Snackbar>\n      </div>\n    );\n  }\n}\n\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://unpkg.com/react-mdl/extra/material.css;https://unpkg.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://unpkg.com/react/dist/react.js;https://unpkg.com/react-dom/dist/react-dom.js;https://unpkg.com/react-mdl/extra/material.js;https://unpkg.com/react-mdl/out/ReactMDL.js;https://unpkg.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>
+<input type="image" src="http://s.cdpn.io/3/cp-arrow-right.svg" width="40" height="40" value="Create New Pen with Prefilled Data" class="codepen-mover-button">
+</form></pre><h2>Configuration</h2>
+<table class="mdl-data-table mdl-shadow--2dp">
+<thead>
+<tr>
+<th style="text-align:left">Prop</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Effect</th>
+<th style="text-align:left">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">action</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Specify the label of the action button</td>
+<td style="text-align:left">Optional</td>
+</tr>
+<tr>
+<td style="text-align:left">active</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">Set the snackbar visible</td>
+<td style="text-align:left">Required. Should be false when mounting the component</td>
+</tr>
+<tr>
+<td style="text-align:left">onActionClick</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">Function to call when the action button is clicked</td>
+<td style="text-align:left">Optional</td>
+</tr>
+<tr>
+<td style="text-align:left">onTimeout</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">Function to call when the snackbar is getting hidden</td>
+<td style="text-align:left">Required</td>
+</tr>
+<tr>
+<td style="text-align:left">timeout</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">Defines the time (in ms) to show the snackbar</td>
+<td style="text-align:left">Optional. Default 2750</td>
+</tr>
+</tbody>
+</table>
+</div></div></div></div></div></div></div></div></div></div><script src="/react-mdl/bundle.js"></script><script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-73434705-1', 'auto');
+ga('send', 'pageview');</script></body></html>

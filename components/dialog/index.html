@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+ <html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/><title>Dialog | React-MDL: React Components for Material Design Lite</title><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/><script src="https://unpkg.com/dialog-polyfill/dialog-polyfill.js"></script><link rel="stylesheet" type="text/css" href="https://unpkg.com/dialog-polyfill/dialog-polyfill.css"/><link rel="stylesheet" href="/react-mdl/styles.css"/></head><body><div id="react-mount"><div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" style="z-index:100001;" data-reactroot="" data-reactid="1" data-react-checksum="931927093"><div class="mdl-layout__inner-container" data-reactid="2"><header class="mdl-layout__header" data-reactid="3"><div class="mdl-layout__header-row" data-reactid="4"><span class="mdl-layout-title" data-reactid="5"><a style="color:#fff;text-decoration:none;" href="/react-mdl/" data-reactid="6">React-MDL</a></span><div class="mdl-layout-spacer" data-reactid="7"></div><nav class="mdl-navigation" data-reactid="8"><a class="mdl-navigation__link" href="/react-mdl/components/" data-reactid="9">Components</a><a class="mdl-navigation__link" href="/react-mdl/templates/" data-reactid="10">Templates</a><a href="https://github.com/react-mdl/react-mdl" class="mdl-navigation__link" data-reactid="11"><i class="material-icons" style="margin-right:8px;vertical-align:middle;" data-reactid="12">link</i><!-- react-text: 13 -->GitHub<!-- /react-text --></a></nav></div></header><div class="mdl-layout__content mdl-color-text--grey-600 mdl-color--grey-50" data-reactid="14"><div class="mdl-grid mdl-grid--no-spacing" data-reactid="15"><div class="mdl-cell mdl-cell--12-col" data-reactid="16"><div class="mdl-grid mdl-grid--no-spacing" data-reactid="17"><aside class="mdl-cell mdl-cell--2-col sidebar-components mdl-shadow--4dp" data-reactid="18"><ul class="mdl-list" data-reactid="19"><li class="mdl-list__item" data-reactid="20"><a href="/react-mdl/components/badge/" data-reactid="21">Badge</a></li><li class="mdl-list__item" data-reactid="22"><a href="/react-mdl/components/button/" data-reactid="23">Buttons</a></li><li class="mdl-list__item" data-reactid="24"><a href="/react-mdl/components/card/" data-reactid="25">Cards</a></li><li class="mdl-list__item" data-reactid="26"><a href="/react-mdl/components/checkbox/" data-reactid="27">Checkbox</a></li><li class="mdl-list__item" data-reactid="28"><a href="/react-mdl/components/chip/" data-reactid="29">Chip</a></li><li class="mdl-list__item" data-reactid="30"><a href="/react-mdl/components/datatable/" data-reactid="31">DataTable</a></li><li class="mdl-list__item" data-reactid="32"><a href="/react-mdl/components/dialog/" data-reactid="33">Dialog</a></li><li class="mdl-list__item" data-reactid="34"><a href="/react-mdl/components/grid/" data-reactid="35">Grid</a></li><li class="mdl-list__item" data-reactid="36"><a href="/react-mdl/components/icon-toggle/" data-reactid="37">Icon Toggle</a></li><li class="mdl-list__item" data-reactid="38"><a href="/react-mdl/components/layout/" data-reactid="39">Layout</a></li><li class="mdl-list__item" data-reactid="40"><a href="/react-mdl/components/list/" data-reactid="41">List</a></li><li class="mdl-list__item" data-reactid="42"><a href="/react-mdl/components/menu/" data-reactid="43">Menu</a></li><li class="mdl-list__item" data-reactid="44"><a href="/react-mdl/components/progress-bar/" data-reactid="45">Progress Bar</a></li><li class="mdl-list__item" data-reactid="46"><a href="/react-mdl/components/radio-button/" data-reactid="47">Radio Button</a></li><li class="mdl-list__item" data-reactid="48"><a href="/react-mdl/components/slider/" data-reactid="49">Slider</a></li><li class="mdl-list__item" data-reactid="50"><a href="/react-mdl/components/snackbar/" data-reactid="51">Snackbar</a></li><li class="mdl-list__item" data-reactid="52"><a href="/react-mdl/components/spinner/" data-reactid="53">Spinner</a></li><li class="mdl-list__item" data-reactid="54"><a href="/react-mdl/components/switch/" data-reactid="55">Switch</a></li><li class="mdl-list__item" data-reactid="56"><a href="/react-mdl/components/tabs/" data-reactid="57">Tabs</a></li><li class="mdl-list__item" data-reactid="58"><a href="/react-mdl/components/textfield/" data-reactid="59">Textfield</a></li><li class="mdl-list__item" data-reactid="60"><a href="/react-mdl/components/tooltip/" data-reactid="61">Tooltip</a></li></ul></aside><div class="mdl-cell mdl-cell--10-col" data-reactid="62"><div class="markdown" data-reactid="63"><h1 data-reactid="64">Dialog</h1><div data-reactid="65"><blockquote>
+<p>This component uses <a href="https://www.w3.org/TR/2013/CR-html5-20130806/interactive-elements.html#the-dialog-element">dialog element</a>, which is only supported by Chrome and Opera currently. For other browsers, you need to include a <a href="https://github.com/GoogleChrome/dialog-polyfill">polyfill</a> in your code.</p>
+</blockquote>
+<blockquote>
+<p>If you’re using the <code>Dialog</code> component with a full MDL app, you will also need to set a custom <code>z-index</code> on the <code>Layout</code> to make the <code>Dialog</code> be accessible on top of the dark overlay. A value of <code>100001</code> is required for this to work.</p>
+</blockquote>
+<h2>Demo</h2>
+<h3>Simple Dialog</h3>
+<div id="demo-81"></div>
+        <script class="demo-js">
+        'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Demo = function (_React$Component) {
+  _inherits(Demo, _React$Component);
+
+  function Demo(props) {
+    _classCallCheck(this, Demo);
+
+    var _this = _possibleConstructorReturn(this, (Demo.__proto__ || Object.getPrototypeOf(Demo)).call(this, props));
+
+    _this.state = {};
+    _this.handleOpenDialog = _this.handleOpenDialog.bind(_this);
+    _this.handleCloseDialog = _this.handleCloseDialog.bind(_this);
+    return _this;
+  }
+
+  _createClass(Demo, [{
+    key: 'handleOpenDialog',
+    value: function handleOpenDialog() {
+      this.setState({
+        openDialog: true
+      });
+    }
+  }, {
+    key: 'handleCloseDialog',
+    value: function handleCloseDialog() {
+      this.setState({
+        openDialog: false
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return React.createElement(
+        'div',
+        null,
+        React.createElement(
+          Button,
+          { colored: true, onClick: this.handleOpenDialog, raised: true, ripple: true },
+          'Show Dialog'
+        ),
+        React.createElement(
+          Dialog,
+          { open: this.state.openDialog },
+          React.createElement(
+            DialogTitle,
+            null,
+            'Allow data collection?'
+          ),
+          React.createElement(
+            DialogContent,
+            null,
+            React.createElement(
+              'p',
+              null,
+              'Allowing us to collect data will let us get you the information you want faster.'
+            )
+          ),
+          React.createElement(
+            DialogActions,
+            null,
+            React.createElement(
+              Button,
+              { type: 'button' },
+              'Agree'
+            ),
+            React.createElement(
+              Button,
+              { type: 'button', onClick: this.handleCloseDialog },
+              'Disagree'
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Demo;
+}(React.Component);
+        var elem = React.createElement(Demo);
+        var cont = document.getElementById("demo-81");
+        ReactDOM.render(elem, cont);
+    </script><pre class="language-jsx"><code class="language-jsx"><span class="token keyword" >class</span> <span class="token class-name" >Demo</span> <span class="token keyword" >extends</span> <span class="token class-name" >React<span class="token punctuation" >.</span>Component</span> <span class="token punctuation" >{</span>
+  <span class="token function" >constructor</span><span class="token punctuation" >(</span>props<span class="token punctuation" >)</span> <span class="token punctuation" >{</span>
+    <span class="token keyword" >super</span><span class="token punctuation" >(</span>props<span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+    <span class="token keyword" >this</span><span class="token punctuation" >.</span>state <span class="token operator" >=</span> <span class="token punctuation" >{</span><span class="token punctuation" >}</span><span class="token punctuation" >;</span>
+    <span class="token keyword" >this</span><span class="token punctuation" >.</span>handleOpenDialog <span class="token operator" >=</span> <span class="token keyword" >this</span><span class="token punctuation" >.</span>handleOpenDialog<span class="token punctuation" >.</span><span class="token function" >bind</span><span class="token punctuation" >(</span><span class="token keyword" >this</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+    <span class="token keyword" >this</span><span class="token punctuation" >.</span>handleCloseDialog <span class="token operator" >=</span> <span class="token keyword" >this</span><span class="token punctuation" >.</span>handleCloseDialog<span class="token punctuation" >.</span><span class="token function" >bind</span><span class="token punctuation" >(</span><span class="token keyword" >this</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+  <span class="token punctuation" >}</span>
+
+  <span class="token function" >handleOpenDialog</span><span class="token punctuation" >(</span><span class="token punctuation" >)</span> <span class="token punctuation" >{</span>
+    <span class="token keyword" >this</span><span class="token punctuation" >.</span><span class="token function" >setState</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span>
+      openDialog<span class="token punctuation" >:</span> <span class="token boolean" >true</span>
+    <span class="token punctuation" >}</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+  <span class="token punctuation" >}</span>
+
+  <span class="token function" >handleCloseDialog</span><span class="token punctuation" >(</span><span class="token punctuation" >)</span> <span class="token punctuation" >{</span>
+    <span class="token keyword" >this</span><span class="token punctuation" >.</span><span class="token function" >setState</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span>
+      openDialog<span class="token punctuation" >:</span> <span class="token boolean" >false</span>
+    <span class="token punctuation" >}</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+  <span class="token punctuation" >}</span>
+
+  <span class="token function" >render</span><span class="token punctuation" >(</span><span class="token punctuation" >)</span> <span class="token punctuation" >{</span>
+    <span class="token keyword" >return</span> <span class="token punctuation" >(</span>
+      <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>div</span><span class="token punctuation" >></span></span>
+        <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Button</span> <span class="token attr-name" >colored</span> <span class="token attr-name" >onClick</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token keyword" >this</span><span class="token punctuation" >.</span>handleOpenDialog<span class="token punctuation" >}</span></span> <span class="token attr-name" >raised</span> <span class="token attr-name" >ripple</span><span class="token punctuation" >></span></span>Show Dialog<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Button</span><span class="token punctuation" >></span></span>
+        <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Dialog</span> <span class="token attr-name" >open</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token keyword" >this</span><span class="token punctuation" >.</span>state<span class="token punctuation" >.</span>openDialog<span class="token punctuation" >}</span></span><span class="token punctuation" >></span></span>
+          <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>DialogTitle</span><span class="token punctuation" >></span></span>Allow data collection<span class="token operator" >?</span><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>DialogTitle</span><span class="token punctuation" >></span></span>
+          <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>DialogContent</span><span class="token punctuation" >></span></span>
+            <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>p</span><span class="token punctuation" >></span></span>Allowing us to collect data will <span class="token keyword" >let</span> us <span class="token keyword" >get</span> you the information you want faster<span class="token punctuation" >.</span><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>p</span><span class="token punctuation" >></span></span>
+          <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>DialogContent</span><span class="token punctuation" >></span></span>
+          <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>DialogActions</span><span class="token punctuation" >></span></span>
+            <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Button</span> <span class="token attr-name" >type</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >'</span>button<span class="token punctuation" >'</span></span><span class="token punctuation" >></span></span>Agree<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Button</span><span class="token punctuation" >></span></span>
+            <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Button</span> <span class="token attr-name" >type</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >'</span>button<span class="token punctuation" >'</span></span> <span class="token attr-name" >onClick</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token keyword" >this</span><span class="token punctuation" >.</span>handleCloseDialog<span class="token punctuation" >}</span></span><span class="token punctuation" >></span></span>Disagree<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Button</span><span class="token punctuation" >></span></span>
+          <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>DialogActions</span><span class="token punctuation" >></span></span>
+        <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Dialog</span><span class="token punctuation" >></span></span>
+      <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>div</span><span class="token punctuation" >></span></span>
+    <span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+  <span class="token punctuation" >}</span>
+<span class="token punctuation" >}</span>
+</code><form class="codepen" action="http://codepen.io/pen/define" method="POST" target="_blank">
+<input type="hidden" name="data" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\&​quot;demo\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;// export the React MDL components globally to use them without the ReactMDL prefix\nfor(const component in ReactMDL) {\n    if(ReactMDL.hasOwnProperty(component)) {\n        window[component] = ReactMDL[component];\n    }\n}\n// for the dialog example, we have to register the dialogs window\nconst dialogs = document.querySelector(\&​quot;dialog\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\nclass Demo extends React.Component {\n  constructor(props) {\n    super(props);\n    this.state = {};\n    this.handleOpenDialog = this.handleOpenDialog.bind(this);\n    this.handleCloseDialog = this.handleCloseDialog.bind(this);\n  }\n\n  handleOpenDialog() {\n    this.setState({\n      openDialog: true\n    });\n  }\n\n  handleCloseDialog() {\n    this.setState({\n      openDialog: false\n    });\n  }\n\n  render() {\n    return (\n      <div>\n        <Button colored onClick={this.handleOpenDialog} raised ripple>Show Dialog</Button>\n        <Dialog open={this.state.openDialog}>\n          <DialogTitle>Allow data collection?</DialogTitle>\n          <DialogContent>\n            <p>Allowing us to collect data will let us get you the information you want faster.</p>\n          </DialogContent>\n          <DialogActions>\n            <Button type=&apos;button&apos;>Agree</Button>\n            <Button type=&apos;button&apos; onClick={this.handleCloseDialog}>Disagree</Button>\n          </DialogActions>\n        </Dialog>\n      </div>\n    );\n  }\n}\n\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://unpkg.com/react-mdl/extra/material.css;https://unpkg.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://unpkg.com/react/dist/react.js;https://unpkg.com/react-dom/dist/react-dom.js;https://unpkg.com/react-mdl/extra/material.js;https://unpkg.com/react-mdl/out/ReactMDL.js;https://unpkg.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>
+<input type="image" src="http://s.cdpn.io/3/cp-arrow-right.svg" width="40" height="40" value="Create New Pen with Prefilled Data" class="codepen-mover-button">
+</form></pre><h3>Dialog with Full Width Actions</h3>
+<div id="demo-82"></div>
+        <script class="demo-js">
+        'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Demo = function (_React$Component) {
+  _inherits(Demo, _React$Component);
+
+  function Demo(props) {
+    _classCallCheck(this, Demo);
+
+    var _this = _possibleConstructorReturn(this, (Demo.__proto__ || Object.getPrototypeOf(Demo)).call(this, props));
+
+    _this.state = {};
+    _this.handleOpenDialog = _this.handleOpenDialog.bind(_this);
+    _this.handleCloseDialog = _this.handleCloseDialog.bind(_this);
+    return _this;
+  }
+
+  _createClass(Demo, [{
+    key: 'handleOpenDialog',
+    value: function handleOpenDialog() {
+      this.setState({
+        openDialog: true
+      });
+    }
+  }, {
+    key: 'handleCloseDialog',
+    value: function handleCloseDialog() {
+      this.setState({
+        openDialog: false
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return React.createElement(
+        'div',
+        null,
+        React.createElement(
+          Button,
+          { colored: true, onClick: this.handleOpenDialog, raised: true, ripple: true },
+          'Show Modal'
+        ),
+        React.createElement(
+          Dialog,
+          { open: this.state.openDialog },
+          React.createElement(
+            DialogTitle,
+            null,
+            'Allow this site to collect usage data to improve your experience?'
+          ),
+          React.createElement(
+            DialogContent,
+            null,
+            React.createElement(
+              'p',
+              null,
+              'Allowing us to collect data will let us get you the information you want faster.'
+            )
+          ),
+          React.createElement(
+            DialogActions,
+            { fullWidth: true },
+            React.createElement(
+              Button,
+              { type: 'button' },
+              'Agree'
+            ),
+            React.createElement(
+              Button,
+              { type: 'button', onClick: this.handleCloseDialog },
+              'Disagree'
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Demo;
+}(React.Component);
+        var elem = React.createElement(Demo);
+        var cont = document.getElementById("demo-82");
+        ReactDOM.render(elem, cont);
+    </script><pre class="language-jsx"><code class="language-jsx"><span class="token keyword" >class</span> <span class="token class-name" >Demo</span> <span class="token keyword" >extends</span> <span class="token class-name" >React<span class="token punctuation" >.</span>Component</span> <span class="token punctuation" >{</span>
+  <span class="token function" >constructor</span><span class="token punctuation" >(</span>props<span class="token punctuation" >)</span> <span class="token punctuation" >{</span>
+    <span class="token keyword" >super</span><span class="token punctuation" >(</span>props<span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+    <span class="token keyword" >this</span><span class="token punctuation" >.</span>state <span class="token operator" >=</span> <span class="token punctuation" >{</span><span class="token punctuation" >}</span><span class="token punctuation" >;</span>
+    <span class="token keyword" >this</span><span class="token punctuation" >.</span>handleOpenDialog <span class="token operator" >=</span> <span class="token keyword" >this</span><span class="token punctuation" >.</span>handleOpenDialog<span class="token punctuation" >.</span><span class="token function" >bind</span><span class="token punctuation" >(</span><span class="token keyword" >this</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+    <span class="token keyword" >this</span><span class="token punctuation" >.</span>handleCloseDialog <span class="token operator" >=</span> <span class="token keyword" >this</span><span class="token punctuation" >.</span>handleCloseDialog<span class="token punctuation" >.</span><span class="token function" >bind</span><span class="token punctuation" >(</span><span class="token keyword" >this</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+  <span class="token punctuation" >}</span>
+
+  <span class="token function" >handleOpenDialog</span><span class="token punctuation" >(</span><span class="token punctuation" >)</span> <span class="token punctuation" >{</span>
+    <span class="token keyword" >this</span><span class="token punctuation" >.</span><span class="token function" >setState</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span>
+      openDialog<span class="token punctuation" >:</span> <span class="token boolean" >true</span>
+    <span class="token punctuation" >}</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+  <span class="token punctuation" >}</span>
+
+  <span class="token function" >handleCloseDialog</span><span class="token punctuation" >(</span><span class="token punctuation" >)</span> <span class="token punctuation" >{</span>
+    <span class="token keyword" >this</span><span class="token punctuation" >.</span><span class="token function" >setState</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span>
+      openDialog<span class="token punctuation" >:</span> <span class="token boolean" >false</span>
+    <span class="token punctuation" >}</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+  <span class="token punctuation" >}</span>
+
+  <span class="token function" >render</span><span class="token punctuation" >(</span><span class="token punctuation" >)</span> <span class="token punctuation" >{</span>
+    <span class="token keyword" >return</span> <span class="token punctuation" >(</span>
+      <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>div</span><span class="token punctuation" >></span></span>
+        <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Button</span> <span class="token attr-name" >colored</span> <span class="token attr-name" >onClick</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token keyword" >this</span><span class="token punctuation" >.</span>handleOpenDialog<span class="token punctuation" >}</span></span> <span class="token attr-name" >raised</span> <span class="token attr-name" >ripple</span><span class="token punctuation" >></span></span>Show Modal<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Button</span><span class="token punctuation" >></span></span>
+        <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Dialog</span> <span class="token attr-name" >open</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token keyword" >this</span><span class="token punctuation" >.</span>state<span class="token punctuation" >.</span>openDialog<span class="token punctuation" >}</span></span><span class="token punctuation" >></span></span>
+          <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>DialogTitle</span><span class="token punctuation" >></span></span>Allow <span class="token keyword" >this</span> site to collect usage data to improve your experience<span class="token operator" >?</span><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>DialogTitle</span><span class="token punctuation" >></span></span>
+          <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>DialogContent</span><span class="token punctuation" >></span></span>
+            <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>p</span><span class="token punctuation" >></span></span>Allowing us to collect data will <span class="token keyword" >let</span> us <span class="token keyword" >get</span> you the information you want faster<span class="token punctuation" >.</span><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>p</span><span class="token punctuation" >></span></span>
+          <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>DialogContent</span><span class="token punctuation" >></span></span>
+          <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>DialogActions</span> <span class="token attr-name" >fullWidth</span><span class="token punctuation" >></span></span>
+            <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Button</span> <span class="token attr-name" >type</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >'</span>button<span class="token punctuation" >'</span></span><span class="token punctuation" >></span></span>Agree<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Button</span><span class="token punctuation" >></span></span>
+            <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Button</span> <span class="token attr-name" >type</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >'</span>button<span class="token punctuation" >'</span></span> <span class="token attr-name" >onClick</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token keyword" >this</span><span class="token punctuation" >.</span>handleCloseDialog<span class="token punctuation" >}</span></span><span class="token punctuation" >></span></span>Disagree<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Button</span><span class="token punctuation" >></span></span>
+          <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>DialogActions</span><span class="token punctuation" >></span></span>
+        <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Dialog</span><span class="token punctuation" >></span></span>
+      <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>div</span><span class="token punctuation" >></span></span>
+    <span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+  <span class="token punctuation" >}</span>
+<span class="token punctuation" >}</span>
+</code><form class="codepen" action="http://codepen.io/pen/define" method="POST" target="_blank">
+<input type="hidden" name="data" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\&​quot;demo\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;// export the React MDL components globally to use them without the ReactMDL prefix\nfor(const component in ReactMDL) {\n    if(ReactMDL.hasOwnProperty(component)) {\n        window[component] = ReactMDL[component];\n    }\n}\n// for the dialog example, we have to register the dialogs window\nconst dialogs = document.querySelector(\&​quot;dialog\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\nclass Demo extends React.Component {\n  constructor(props) {\n    super(props);\n    this.state = {};\n    this.handleOpenDialog = this.handleOpenDialog.bind(this);\n    this.handleCloseDialog = this.handleCloseDialog.bind(this);\n  }\n\n  handleOpenDialog() {\n    this.setState({\n      openDialog: true\n    });\n  }\n\n  handleCloseDialog() {\n    this.setState({\n      openDialog: false\n    });\n  }\n\n  render() {\n    return (\n      <div>\n        <Button colored onClick={this.handleOpenDialog} raised ripple>Show Modal</Button>\n        <Dialog open={this.state.openDialog}>\n          <DialogTitle>Allow this site to collect usage data to improve your experience?</DialogTitle>\n          <DialogContent>\n            <p>Allowing us to collect data will let us get you the information you want faster.</p>\n          </DialogContent>\n          <DialogActions fullWidth>\n            <Button type=&apos;button&apos;>Agree</Button>\n            <Button type=&apos;button&apos; onClick={this.handleCloseDialog}>Disagree</Button>\n          </DialogActions>\n        </Dialog>\n      </div>\n    );\n  }\n}\n\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://unpkg.com/react-mdl/extra/material.css;https://unpkg.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://unpkg.com/react/dist/react.js;https://unpkg.com/react-dom/dist/react-dom.js;https://unpkg.com/react-mdl/extra/material.js;https://unpkg.com/react-mdl/out/ReactMDL.js;https://unpkg.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>
+<input type="image" src="http://s.cdpn.io/3/cp-arrow-right.svg" width="40" height="40" value="Create New Pen with Prefilled Data" class="codepen-mover-button">
+</form></pre><h3>Dialog with Cancel Event Handler</h3>
+<div id="demo-83"></div>
+        <script class="demo-js">
+        'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+{/* Cancel event is emitted when the user clicks "Escape" key while the modal is open.
+     It doesn't do anything by default.*/}
+
+var Demo = function (_React$Component) {
+  _inherits(Demo, _React$Component);
+
+  function Demo(props) {
+    _classCallCheck(this, Demo);
+
+    var _this = _possibleConstructorReturn(this, (Demo.__proto__ || Object.getPrototypeOf(Demo)).call(this, props));
+
+    _this.state = {};
+    _this.handleOpenDialog = _this.handleOpenDialog.bind(_this);
+    _this.handleCloseDialog = _this.handleCloseDialog.bind(_this);
+    return _this;
+  }
+
+  _createClass(Demo, [{
+    key: 'handleOpenDialog',
+    value: function handleOpenDialog() {
+      this.setState({
+        openDialog: true
+      });
+    }
+  }, {
+    key: 'handleCloseDialog',
+    value: function handleCloseDialog() {
+      this.setState({
+        openDialog: false
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return React.createElement(
+        'div',
+        null,
+        React.createElement(
+          Button,
+          { colored: true, onClick: this.handleOpenDialog, raised: true, ripple: true },
+          'Show Dialog'
+        ),
+        React.createElement(
+          Dialog,
+          { open: this.state.openDialog, onCancel: this.handleCloseDialog },
+          React.createElement(
+            DialogTitle,
+            null,
+            'Allow data collection?'
+          ),
+          React.createElement(
+            DialogContent,
+            null,
+            React.createElement(
+              'p',
+              null,
+              'Allowing us to collect data will let us get you the information you want faster.'
+            )
+          ),
+          React.createElement(
+            DialogActions,
+            null,
+            React.createElement(
+              Button,
+              { type: 'button' },
+              'Agree'
+            ),
+            React.createElement(
+              Button,
+              { type: 'button', onClick: this.handleCloseDialog },
+              'Disagree'
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Demo;
+}(React.Component);
+        var elem = React.createElement(Demo);
+        var cont = document.getElementById("demo-83");
+        ReactDOM.render(elem, cont);
+    </script><pre class="language-jsx"><code class="language-jsx"><span class="token punctuation" >{</span><span class="token comment" spellcheck="true">/* Cancel event is emitted when the user clicks "Escape" key while the modal is open.
+    It doesn't do anything by default.*/</span><span class="token punctuation" >}</span>
+<span class="token keyword" >class</span> <span class="token class-name" >Demo</span> <span class="token keyword" >extends</span> <span class="token class-name" >React<span class="token punctuation" >.</span>Component</span> <span class="token punctuation" >{</span>
+  <span class="token function" >constructor</span><span class="token punctuation" >(</span>props<span class="token punctuation" >)</span> <span class="token punctuation" >{</span>
+    <span class="token keyword" >super</span><span class="token punctuation" >(</span>props<span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+    <span class="token keyword" >this</span><span class="token punctuation" >.</span>state <span class="token operator" >=</span> <span class="token punctuation" >{</span><span class="token punctuation" >}</span><span class="token punctuation" >;</span>
+    <span class="token keyword" >this</span><span class="token punctuation" >.</span>handleOpenDialog <span class="token operator" >=</span> <span class="token keyword" >this</span><span class="token punctuation" >.</span>handleOpenDialog<span class="token punctuation" >.</span><span class="token function" >bind</span><span class="token punctuation" >(</span><span class="token keyword" >this</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+    <span class="token keyword" >this</span><span class="token punctuation" >.</span>handleCloseDialog <span class="token operator" >=</span> <span class="token keyword" >this</span><span class="token punctuation" >.</span>handleCloseDialog<span class="token punctuation" >.</span><span class="token function" >bind</span><span class="token punctuation" >(</span><span class="token keyword" >this</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+  <span class="token punctuation" >}</span>
+
+  <span class="token function" >handleOpenDialog</span><span class="token punctuation" >(</span><span class="token punctuation" >)</span> <span class="token punctuation" >{</span>
+    <span class="token keyword" >this</span><span class="token punctuation" >.</span><span class="token function" >setState</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span>
+      openDialog<span class="token punctuation" >:</span> <span class="token boolean" >true</span>
+    <span class="token punctuation" >}</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+  <span class="token punctuation" >}</span>
+
+  <span class="token function" >handleCloseDialog</span><span class="token punctuation" >(</span><span class="token punctuation" >)</span> <span class="token punctuation" >{</span>
+    <span class="token keyword" >this</span><span class="token punctuation" >.</span><span class="token function" >setState</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span>
+      openDialog<span class="token punctuation" >:</span> <span class="token boolean" >false</span>
+    <span class="token punctuation" >}</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+  <span class="token punctuation" >}</span>
+
+  <span class="token function" >render</span><span class="token punctuation" >(</span><span class="token punctuation" >)</span> <span class="token punctuation" >{</span>
+    <span class="token keyword" >return</span> <span class="token punctuation" >(</span>
+      <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>div</span><span class="token punctuation" >></span></span>
+        <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Button</span> <span class="token attr-name" >colored</span> <span class="token attr-name" >onClick</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token keyword" >this</span><span class="token punctuation" >.</span>handleOpenDialog<span class="token punctuation" >}</span></span> <span class="token attr-name" >raised</span> <span class="token attr-name" >ripple</span><span class="token punctuation" >></span></span>Show Dialog<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Button</span><span class="token punctuation" >></span></span>
+        <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Dialog</span> <span class="token attr-name" >open</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token keyword" >this</span><span class="token punctuation" >.</span>state<span class="token punctuation" >.</span>openDialog<span class="token punctuation" >}</span></span> <span class="token attr-name" >onCancel</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token keyword" >this</span><span class="token punctuation" >.</span>handleCloseDialog<span class="token punctuation" >}</span></span><span class="token punctuation" >></span></span>
+          <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>DialogTitle</span><span class="token punctuation" >></span></span>Allow data collection<span class="token operator" >?</span><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>DialogTitle</span><span class="token punctuation" >></span></span>
+          <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>DialogContent</span><span class="token punctuation" >></span></span>
+            <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>p</span><span class="token punctuation" >></span></span>Allowing us to collect data will <span class="token keyword" >let</span> us <span class="token keyword" >get</span> you the information you want faster<span class="token punctuation" >.</span><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>p</span><span class="token punctuation" >></span></span>
+          <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>DialogContent</span><span class="token punctuation" >></span></span>
+          <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>DialogActions</span><span class="token punctuation" >></span></span>
+            <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Button</span> <span class="token attr-name" >type</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >'</span>button<span class="token punctuation" >'</span></span><span class="token punctuation" >></span></span>Agree<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Button</span><span class="token punctuation" >></span></span>
+            <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Button</span> <span class="token attr-name" >type</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >'</span>button<span class="token punctuation" >'</span></span> <span class="token attr-name" >onClick</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token keyword" >this</span><span class="token punctuation" >.</span>handleCloseDialog<span class="token punctuation" >}</span></span><span class="token punctuation" >></span></span>Disagree<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Button</span><span class="token punctuation" >></span></span>
+          <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>DialogActions</span><span class="token punctuation" >></span></span>
+        <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Dialog</span><span class="token punctuation" >></span></span>
+      <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>div</span><span class="token punctuation" >></span></span>
+    <span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+  <span class="token punctuation" >}</span>
+<span class="token punctuation" >}</span>
+</code><form class="codepen" action="http://codepen.io/pen/define" method="POST" target="_blank">
+<input type="hidden" name="data" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\&​quot;demo\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;// export the React MDL components globally to use them without the ReactMDL prefix\nfor(const component in ReactMDL) {\n    if(ReactMDL.hasOwnProperty(component)) {\n        window[component] = ReactMDL[component];\n    }\n}\n// for the dialog example, we have to register the dialogs window\nconst dialogs = document.querySelector(\&​quot;dialog\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\n{/* Cancel event is emitted when the user clicks \&​quot;Escape\&​quot; key while the modal is open.\n    It doesn&apos;t do anything by default.*/}\nclass Demo extends React.Component {\n  constructor(props) {\n    super(props);\n    this.state = {};\n    this.handleOpenDialog = this.handleOpenDialog.bind(this);\n    this.handleCloseDialog = this.handleCloseDialog.bind(this);\n  }\n\n  handleOpenDialog() {\n    this.setState({\n      openDialog: true\n    });\n  }\n\n  handleCloseDialog() {\n    this.setState({\n      openDialog: false\n    });\n  }\n\n  render() {\n    return (\n      <div>\n        <Button colored onClick={this.handleOpenDialog} raised ripple>Show Dialog</Button>\n        <Dialog open={this.state.openDialog} onCancel={this.handleCloseDialog}>\n          <DialogTitle>Allow data collection?</DialogTitle>\n          <DialogContent>\n            <p>Allowing us to collect data will let us get you the information you want faster.</p>\n          </DialogContent>\n          <DialogActions>\n            <Button type=&apos;button&apos;>Agree</Button>\n            <Button type=&apos;button&apos; onClick={this.handleCloseDialog}>Disagree</Button>\n          </DialogActions>\n        </Dialog>\n      </div>\n    );\n  }\n}\n\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://unpkg.com/react-mdl/extra/material.css;https://unpkg.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://unpkg.com/react/dist/react.js;https://unpkg.com/react-dom/dist/react-dom.js;https://unpkg.com/react-mdl/extra/material.js;https://unpkg.com/react-mdl/out/ReactMDL.js;https://unpkg.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>
+<input type="image" src="http://s.cdpn.io/3/cp-arrow-right.svg" width="40" height="40" value="Create New Pen with Prefilled Data" class="codepen-mover-button">
+</form></pre><h2>Configuration</h2>
+<table class="mdl-data-table mdl-shadow--2dp">
+<thead>
+<tr>
+<th style="text-align:left">Element</th>
+<th style="text-align:left">Prop</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Effect</th>
+<th style="text-align:left">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Dialog</td>
+<td style="text-align:left">onCancel</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">Defines the handler for the cancel event. (When the user press the “Escape” key)</td>
+<td style="text-align:left">Optional. By default, the default behavior (closing the dialog) is prevented.</td>
+</tr>
+<tr>
+<td style="text-align:left">Dialog</td>
+<td style="text-align:left">open</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">Set the open state of the dialog</td>
+<td style="text-align:left">Optional</td>
+</tr>
+<tr>
+<td style="text-align:left">DialogTitle</td>
+<td style="text-align:left">component</td>
+<td style="text-align:left">String, Element, Function</td>
+<td style="text-align:left">Specify the custom component to use to render the element</td>
+<td style="text-align:left">Optional. Default ‘h4’</td>
+</tr>
+<tr>
+<td style="text-align:left">DialogActions</td>
+<td style="text-align:left">fullWidth</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">Apply the full-width effect to all children of dialog actions</td>
+<td style="text-align:left">Optional</td>
+</tr>
+</tbody>
+</table>
+</div></div></div></div></div></div></div></div></div></div><script src="/react-mdl/bundle.js"></script><script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-73434705-1', 'auto');
+ga('send', 'pageview');</script></body></html>

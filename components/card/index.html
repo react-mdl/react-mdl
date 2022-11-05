@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+ <html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/><title>Cards | React-MDL: React Components for Material Design Lite</title><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/><script src="https://unpkg.com/dialog-polyfill/dialog-polyfill.js"></script><link rel="stylesheet" type="text/css" href="https://unpkg.com/dialog-polyfill/dialog-polyfill.css"/><link rel="stylesheet" href="/react-mdl/styles.css"/></head><body><div id="react-mount"><div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" style="z-index:100001;" data-reactroot="" data-reactid="1" data-react-checksum="774212258"><div class="mdl-layout__inner-container" data-reactid="2"><header class="mdl-layout__header" data-reactid="3"><div class="mdl-layout__header-row" data-reactid="4"><span class="mdl-layout-title" data-reactid="5"><a style="color:#fff;text-decoration:none;" href="/react-mdl/" data-reactid="6">React-MDL</a></span><div class="mdl-layout-spacer" data-reactid="7"></div><nav class="mdl-navigation" data-reactid="8"><a class="mdl-navigation__link" href="/react-mdl/components/" data-reactid="9">Components</a><a class="mdl-navigation__link" href="/react-mdl/templates/" data-reactid="10">Templates</a><a href="https://github.com/react-mdl/react-mdl" class="mdl-navigation__link" data-reactid="11"><i class="material-icons" style="margin-right:8px;vertical-align:middle;" data-reactid="12">link</i><!-- react-text: 13 -->GitHub<!-- /react-text --></a></nav></div></header><div class="mdl-layout__content mdl-color-text--grey-600 mdl-color--grey-50" data-reactid="14"><div class="mdl-grid mdl-grid--no-spacing" data-reactid="15"><div class="mdl-cell mdl-cell--12-col" data-reactid="16"><div class="mdl-grid mdl-grid--no-spacing" data-reactid="17"><aside class="mdl-cell mdl-cell--2-col sidebar-components mdl-shadow--4dp" data-reactid="18"><ul class="mdl-list" data-reactid="19"><li class="mdl-list__item" data-reactid="20"><a href="/react-mdl/components/badge/" data-reactid="21">Badge</a></li><li class="mdl-list__item" data-reactid="22"><a href="/react-mdl/components/button/" data-reactid="23">Buttons</a></li><li class="mdl-list__item" data-reactid="24"><a href="/react-mdl/components/card/" data-reactid="25">Cards</a></li><li class="mdl-list__item" data-reactid="26"><a href="/react-mdl/components/checkbox/" data-reactid="27">Checkbox</a></li><li class="mdl-list__item" data-reactid="28"><a href="/react-mdl/components/chip/" data-reactid="29">Chip</a></li><li class="mdl-list__item" data-reactid="30"><a href="/react-mdl/components/datatable/" data-reactid="31">DataTable</a></li><li class="mdl-list__item" data-reactid="32"><a href="/react-mdl/components/dialog/" data-reactid="33">Dialog</a></li><li class="mdl-list__item" data-reactid="34"><a href="/react-mdl/components/grid/" data-reactid="35">Grid</a></li><li class="mdl-list__item" data-reactid="36"><a href="/react-mdl/components/icon-toggle/" data-reactid="37">Icon Toggle</a></li><li class="mdl-list__item" data-reactid="38"><a href="/react-mdl/components/layout/" data-reactid="39">Layout</a></li><li class="mdl-list__item" data-reactid="40"><a href="/react-mdl/components/list/" data-reactid="41">List</a></li><li class="mdl-list__item" data-reactid="42"><a href="/react-mdl/components/menu/" data-reactid="43">Menu</a></li><li class="mdl-list__item" data-reactid="44"><a href="/react-mdl/components/progress-bar/" data-reactid="45">Progress Bar</a></li><li class="mdl-list__item" data-reactid="46"><a href="/react-mdl/components/radio-button/" data-reactid="47">Radio Button</a></li><li class="mdl-list__item" data-reactid="48"><a href="/react-mdl/components/slider/" data-reactid="49">Slider</a></li><li class="mdl-list__item" data-reactid="50"><a href="/react-mdl/components/snackbar/" data-reactid="51">Snackbar</a></li><li class="mdl-list__item" data-reactid="52"><a href="/react-mdl/components/spinner/" data-reactid="53">Spinner</a></li><li class="mdl-list__item" data-reactid="54"><a href="/react-mdl/components/switch/" data-reactid="55">Switch</a></li><li class="mdl-list__item" data-reactid="56"><a href="/react-mdl/components/tabs/" data-reactid="57">Tabs</a></li><li class="mdl-list__item" data-reactid="58"><a href="/react-mdl/components/textfield/" data-reactid="59">Textfield</a></li><li class="mdl-list__item" data-reactid="60"><a href="/react-mdl/components/tooltip/" data-reactid="61">Tooltip</a></li></ul></aside><div class="mdl-cell mdl-cell--10-col" data-reactid="62"><div class="markdown" data-reactid="63"><h1 data-reactid="64">Cards</h1><div data-reactid="65"><h2>Demo</h2>
+<div id="demo-71" class="demo-container"></div>
+<script class="demo-js">
+        var elem = React.createElement(
+    Card,
+    { shadow: 0, style: { width: '512px', margin: 'auto' } },
+    React.createElement(
+        CardTitle,
+        { style: { color: '#fff', height: '176px', background: 'url(http://www.getmdl.io/assets/demos/welcome_card.jpg) center / cover' } },
+        'Welcome'
+    ),
+    React.createElement(
+        CardText,
+        null,
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...'
+    ),
+    React.createElement(
+        CardActions,
+        { border: true },
+        React.createElement(
+            Button,
+            { colored: true },
+            'Get Started'
+        )
+    ),
+    React.createElement(
+        CardMenu,
+        { style: { color: '#fff' } },
+        React.createElement(IconButton, { name: 'share' })
+    )
+);;
+        var cont = document.getElementById("demo-71");
+        ReactDOM.render(elem, cont);
+    </script><pre class="language-jsx"><code class="language-jsx"><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Card</span> <span class="token attr-name" >shadow</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token number" >0</span><span class="token punctuation" >}</span></span> <span class="token attr-name" >style</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token punctuation" >{</span>width<span class="token punctuation" >:</span> <span class="token string" >'512px'</span><span class="token punctuation" >,</span> margin<span class="token punctuation" >:</span> <span class="token string" >'auto'</span><span class="token punctuation" >}</span><span class="token punctuation" >}</span></span><span class="token punctuation" >></span></span>
+    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>CardTitle</span> <span class="token attr-name" >style</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token punctuation" >{</span>color<span class="token punctuation" >:</span> <span class="token string" >'#fff'</span><span class="token punctuation" >,</span> height<span class="token punctuation" >:</span> <span class="token string" >'176px'</span><span class="token punctuation" >,</span> background<span class="token punctuation" >:</span> <span class="token string" >'url(http://www.getmdl.io/assets/demos/welcome_card.jpg) center / cover'</span><span class="token punctuation" >}</span><span class="token punctuation" >}</span></span><span class="token punctuation" >></span></span>Welcome<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>CardTitle</span><span class="token punctuation" >></span></span>
+    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>CardText</span><span class="token punctuation" >></span></span>
+        Lorem ipsum dolor sit amet<span class="token punctuation" >,</span> consectetur adipiscing elit<span class="token punctuation" >.</span>
+        Mauris sagittis pellentesque lacus eleifend lacinia<span class="token punctuation" >.</span><span class="token punctuation" >.</span><span class="token punctuation" >.</span>
+    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>CardText</span><span class="token punctuation" >></span></span>
+    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>CardActions</span> <span class="token attr-name" >border</span><span class="token punctuation" >></span></span>
+        <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Button</span> <span class="token attr-name" >colored</span><span class="token punctuation" >></span></span>Get Started<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Button</span><span class="token punctuation" >></span></span>
+    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>CardActions</span><span class="token punctuation" >></span></span>
+    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>CardMenu</span> <span class="token attr-name" >style</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token punctuation" >{</span>color<span class="token punctuation" >:</span> <span class="token string" >'#fff'</span><span class="token punctuation" >}</span><span class="token punctuation" >}</span></span><span class="token punctuation" >></span></span>
+        <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>IconButton</span> <span class="token attr-name" >name</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>share<span class="token punctuation" >"</span></span> <span class="token punctuation" >/></span></span>
+    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>CardMenu</span><span class="token punctuation" >></span></span>
+<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Card</span><span class="token punctuation" >></span></span>
+</code><form class="codepen" action="http://codepen.io/pen/define" method="POST" target="_blank">
+<input type="hidden" name="data" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\&​quot;demo\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;// export the React MDL components globally to use them without the ReactMDL prefix\nfor(const component in ReactMDL) {\n    if(ReactMDL.hasOwnProperty(component)) {\n        window[component] = ReactMDL[component];\n    }\n}\n// for the dialog example, we have to register the dialogs window\nconst dialogs = document.querySelector(\&​quot;dialog\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\n\nconst Demo = (props) => (\n<Card shadow={0} style={{width: &apos;512px&apos;, margin: &apos;auto&apos;}}>\n    <CardTitle style={{color: &apos;#fff&apos;, height: &apos;176px&apos;, background: &apos;url(http://www.getmdl.io/assets/demos/welcome_card.jpg) center / cover&apos;}}>Welcome</CardTitle>\n    <CardText>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Mauris sagittis pellentesque lacus eleifend lacinia...\n    </CardText>\n    <CardActions border>\n        <Button colored>Get Started</Button>\n    </CardActions>\n    <CardMenu style={{color: &apos;#fff&apos;}}>\n        <IconButton name=\&​quot;share\&​quot; />\n    </CardMenu>\n</Card>\n\n);\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://unpkg.com/react-mdl/extra/material.css;https://unpkg.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://unpkg.com/react/dist/react.js;https://unpkg.com/react-dom/dist/react-dom.js;https://unpkg.com/react-mdl/extra/material.js;https://unpkg.com/react-mdl/out/ReactMDL.js;https://unpkg.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>
+<input type="image" src="http://s.cdpn.io/3/cp-arrow-right.svg" width="40" height="40" value="Create New Pen with Prefilled Data" class="codepen-mover-button">
+</form></pre><div id="demo-72" class="demo-container"></div>
+<script class="demo-js">
+        var elem = React.createElement(
+    Card,
+    { shadow: 0, style: { width: '320px', height: '320px', margin: 'auto' } },
+    React.createElement(
+        CardTitle,
+        { expand: true, style: { color: '#fff', background: 'url(http://www.getmdl.io/assets/demos/dog.png) bottom right 15% no-repeat #46B6AC' } },
+        'Update'
+    ),
+    React.createElement(
+        CardText,
+        null,
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenan convallis.'
+    ),
+    React.createElement(
+        CardActions,
+        { border: true },
+        React.createElement(
+            Button,
+            { colored: true },
+            'View Updates'
+        )
+    )
+);;
+        var cont = document.getElementById("demo-72");
+        ReactDOM.render(elem, cont);
+    </script><pre class="language-jsx"><code class="language-jsx"><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Card</span> <span class="token attr-name" >shadow</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token number" >0</span><span class="token punctuation" >}</span></span> <span class="token attr-name" >style</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token punctuation" >{</span>width<span class="token punctuation" >:</span> <span class="token string" >'320px'</span><span class="token punctuation" >,</span> height<span class="token punctuation" >:</span> <span class="token string" >'320px'</span><span class="token punctuation" >,</span> margin<span class="token punctuation" >:</span> <span class="token string" >'auto'</span><span class="token punctuation" >}</span><span class="token punctuation" >}</span></span><span class="token punctuation" >></span></span>
+    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>CardTitle</span> <span class="token attr-name" >expand</span> <span class="token attr-name" >style</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token punctuation" >{</span>color<span class="token punctuation" >:</span> <span class="token string" >'#fff'</span><span class="token punctuation" >,</span> background<span class="token punctuation" >:</span> <span class="token string" >'url(http://www.getmdl.io/assets/demos/dog.png) bottom right 15% no-repeat #46B6AC'</span><span class="token punctuation" >}</span><span class="token punctuation" >}</span></span><span class="token punctuation" >></span></span>Update<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>CardTitle</span><span class="token punctuation" >></span></span>
+    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>CardText</span><span class="token punctuation" >></span></span>
+        Lorem ipsum dolor sit amet<span class="token punctuation" >,</span> consectetur adipiscing elit<span class="token punctuation" >.</span>
+        Aenan convallis<span class="token punctuation" >.</span>
+    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>CardText</span><span class="token punctuation" >></span></span>
+    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>CardActions</span> <span class="token attr-name" >border</span><span class="token punctuation" >></span></span>
+        <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Button</span> <span class="token attr-name" >colored</span><span class="token punctuation" >></span></span>View Updates<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Button</span><span class="token punctuation" >></span></span>
+    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>CardActions</span><span class="token punctuation" >></span></span>
+<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Card</span><span class="token punctuation" >></span></span>
+</code><form class="codepen" action="http://codepen.io/pen/define" method="POST" target="_blank">
+<input type="hidden" name="data" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\&​quot;demo\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;// export the React MDL components globally to use them without the ReactMDL prefix\nfor(const component in ReactMDL) {\n    if(ReactMDL.hasOwnProperty(component)) {\n        window[component] = ReactMDL[component];\n    }\n}\n// for the dialog example, we have to register the dialogs window\nconst dialogs = document.querySelector(\&​quot;dialog\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\n\nconst Demo = (props) => (\n<Card shadow={0} style={{width: &apos;320px&apos;, height: &apos;320px&apos;, margin: &apos;auto&apos;}}>\n    <CardTitle expand style={{color: &apos;#fff&apos;, background: &apos;url(http://www.getmdl.io/assets/demos/dog.png) bottom right 15% no-repeat #46B6AC&apos;}}>Update</CardTitle>\n    <CardText>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Aenan convallis.\n    </CardText>\n    <CardActions border>\n        <Button colored>View Updates</Button>\n    </CardActions>\n</Card>\n\n);\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://unpkg.com/react-mdl/extra/material.css;https://unpkg.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://unpkg.com/react/dist/react.js;https://unpkg.com/react-dom/dist/react-dom.js;https://unpkg.com/react-mdl/extra/material.js;https://unpkg.com/react-mdl/out/ReactMDL.js;https://unpkg.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>
+<input type="image" src="http://s.cdpn.io/3/cp-arrow-right.svg" width="40" height="40" value="Create New Pen with Prefilled Data" class="codepen-mover-button">
+</form></pre><div id="demo-73" class="demo-container"></div>
+<script class="demo-js">
+        var elem = React.createElement(
+    Card,
+    { shadow: 0, style: { width: '256px', height: '256px', background: 'url(http://www.getmdl.io/assets/demos/image_card.jpg) center / cover', margin: 'auto' } },
+    React.createElement(CardTitle, { expand: true }),
+    React.createElement(
+        CardActions,
+        { style: { height: '52px', padding: '16px', background: 'rgba(0,0,0,0.2)' } },
+        React.createElement(
+            'span',
+            { style: { color: '#fff', fontSize: '14px', fontWeight: '500' } },
+            'Image.jpg'
+        )
+    )
+);;
+        var cont = document.getElementById("demo-73");
+        ReactDOM.render(elem, cont);
+    </script><pre class="language-jsx"><code class="language-jsx"><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Card</span> <span class="token attr-name" >shadow</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token number" >0</span><span class="token punctuation" >}</span></span> <span class="token attr-name" >style</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token punctuation" >{</span>width<span class="token punctuation" >:</span> <span class="token string" >'256px'</span><span class="token punctuation" >,</span> height<span class="token punctuation" >:</span> <span class="token string" >'256px'</span><span class="token punctuation" >,</span> background<span class="token punctuation" >:</span> <span class="token string" >'url(http://www.getmdl.io/assets/demos/image_card.jpg) center / cover'</span><span class="token punctuation" >,</span> margin<span class="token punctuation" >:</span> <span class="token string" >'auto'</span><span class="token punctuation" >}</span><span class="token punctuation" >}</span></span><span class="token punctuation" >></span></span>
+    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>CardTitle</span> <span class="token attr-name" >expand</span> <span class="token punctuation" >/></span></span>
+    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>CardActions</span> <span class="token attr-name" >style</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token punctuation" >{</span>height<span class="token punctuation" >:</span> <span class="token string" >'52px'</span><span class="token punctuation" >,</span> padding<span class="token punctuation" >:</span> <span class="token string" >'16px'</span><span class="token punctuation" >,</span> background<span class="token punctuation" >:</span> <span class="token string" >'rgba(0,0,0,0.2)'</span><span class="token punctuation" >}</span><span class="token punctuation" >}</span></span><span class="token punctuation" >></span></span>
+        <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>span</span> <span class="token attr-name" >style</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token punctuation" >{</span>color<span class="token punctuation" >:</span> <span class="token string" >'#fff'</span><span class="token punctuation" >,</span> fontSize<span class="token punctuation" >:</span> <span class="token string" >'14px'</span><span class="token punctuation" >,</span> fontWeight<span class="token punctuation" >:</span> <span class="token string" >'500'</span><span class="token punctuation" >}</span><span class="token punctuation" >}</span></span><span class="token punctuation" >></span></span>
+            Image<span class="token punctuation" >.</span>jpg
+        <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>span</span><span class="token punctuation" >></span></span>
+    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>CardActions</span><span class="token punctuation" >></span></span>
+<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Card</span><span class="token punctuation" >></span></span>
+</code><form class="codepen" action="http://codepen.io/pen/define" method="POST" target="_blank">
+<input type="hidden" name="data" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\&​quot;demo\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;// export the React MDL components globally to use them without the ReactMDL prefix\nfor(const component in ReactMDL) {\n    if(ReactMDL.hasOwnProperty(component)) {\n        window[component] = ReactMDL[component];\n    }\n}\n// for the dialog example, we have to register the dialogs window\nconst dialogs = document.querySelector(\&​quot;dialog\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\n\nconst Demo = (props) => (\n<Card shadow={0} style={{width: &apos;256px&apos;, height: &apos;256px&apos;, background: &apos;url(http://www.getmdl.io/assets/demos/image_card.jpg) center / cover&apos;, margin: &apos;auto&apos;}}>\n    <CardTitle expand />\n    <CardActions style={{height: &apos;52px&apos;, padding: &apos;16px&apos;, background: &apos;rgba(0,0,0,0.2)&apos;}}>\n        <span style={{color: &apos;#fff&apos;, fontSize: &apos;14px&apos;, fontWeight: &apos;500&apos;}}>\n            Image.jpg\n        </span>\n    </CardActions>\n</Card>\n\n);\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://unpkg.com/react-mdl/extra/material.css;https://unpkg.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://unpkg.com/react/dist/react.js;https://unpkg.com/react-dom/dist/react-dom.js;https://unpkg.com/react-mdl/extra/material.js;https://unpkg.com/react-mdl/out/ReactMDL.js;https://unpkg.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>
+<input type="image" src="http://s.cdpn.io/3/cp-arrow-right.svg" width="40" height="40" value="Create New Pen with Prefilled Data" class="codepen-mover-button">
+</form></pre><div id="demo-74" class="demo-container"></div>
+<script class="demo-js">
+        var elem = React.createElement(
+    Card,
+    { shadow: 0, style: { width: '256px', height: '256px', background: '#3E4EB8' } },
+    React.createElement(
+        CardTitle,
+        { expand: true, style: { alignItems: 'flex-start', color: '#fff' } },
+        React.createElement(
+            'h4',
+            { style: { marginTop: '0' } },
+            'Featured event:',
+            React.createElement('br', null),
+            'May 24, 2016',
+            React.createElement('br', null),
+            '7-11pm'
+        )
+    ),
+    React.createElement(
+        CardActions,
+        { border: true, style: { borderColor: 'rgba(255, 255, 255, 0.2)', display: 'flex', boxSizing: 'border-box', alignItems: 'center', color: '#fff' } },
+        React.createElement(
+            Button,
+            { colored: true, style: { color: '#fff' } },
+            'Add to Calendar'
+        ),
+        React.createElement('div', { className: 'mdl-layout-spacer' }),
+        React.createElement(Icon, { name: 'event' })
+    )
+);;
+        var cont = document.getElementById("demo-74");
+        ReactDOM.render(elem, cont);
+    </script><pre class="language-jsx"><code class="language-jsx"><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Card</span> <span class="token attr-name" >shadow</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token number" >0</span><span class="token punctuation" >}</span></span> <span class="token attr-name" >style</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token punctuation" >{</span>width<span class="token punctuation" >:</span> <span class="token string" >'256px'</span><span class="token punctuation" >,</span> height<span class="token punctuation" >:</span> <span class="token string" >'256px'</span><span class="token punctuation" >,</span> background<span class="token punctuation" >:</span> <span class="token string" >'#3E4EB8'</span><span class="token punctuation" >}</span><span class="token punctuation" >}</span></span><span class="token punctuation" >></span></span>
+    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>CardTitle</span> <span class="token attr-name" >expand</span> <span class="token attr-name" >style</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token punctuation" >{</span>alignItems<span class="token punctuation" >:</span> <span class="token string" >'flex-start'</span><span class="token punctuation" >,</span> color<span class="token punctuation" >:</span> <span class="token string" >'#fff'</span><span class="token punctuation" >}</span><span class="token punctuation" >}</span></span><span class="token punctuation" >></span></span>
+        <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>h4</span> <span class="token attr-name" >style</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token punctuation" >{</span>marginTop<span class="token punctuation" >:</span> <span class="token string" >'0'</span><span class="token punctuation" >}</span><span class="token punctuation" >}</span></span><span class="token punctuation" >></span></span>
+            Featured event<span class="token punctuation" >:</span><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>br</span> <span class="token punctuation" >/></span></span>
+            May <span class="token number" >24</span><span class="token punctuation" >,</span> <span class="token number" >2016</span><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>br</span> <span class="token punctuation" >/></span></span>
+            <span class="token number" >7</span><span class="token operator" >-</span>11pm
+        <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>h4</span><span class="token punctuation" >></span></span>
+    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>CardTitle</span><span class="token punctuation" >></span></span>
+    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>CardActions</span> <span class="token attr-name" >border</span> <span class="token attr-name" >style</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token punctuation" >{</span>borderColor<span class="token punctuation" >:</span> <span class="token string" >'rgba(255, 255, 255, 0.2)'</span><span class="token punctuation" >,</span> display<span class="token punctuation" >:</span> <span class="token string" >'flex'</span><span class="token punctuation" >,</span> boxSizing<span class="token punctuation" >:</span> <span class="token string" >'border-box'</span><span class="token punctuation" >,</span> alignItems<span class="token punctuation" >:</span> <span class="token string" >'center'</span><span class="token punctuation" >,</span> color<span class="token punctuation" >:</span> <span class="token string" >'#fff'</span><span class="token punctuation" >}</span><span class="token punctuation" >}</span></span><span class="token punctuation" >></span></span>
+        <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Button</span> <span class="token attr-name" >colored</span> <span class="token attr-name" >style</span><span class="token script language-javascript" ><span class="token punctuation" >=</span><span class="token punctuation" >{</span><span class="token punctuation" >{</span>color<span class="token punctuation" >:</span> <span class="token string" >'#fff'</span><span class="token punctuation" >}</span><span class="token punctuation" >}</span></span><span class="token punctuation" >></span></span>Add to Calendar<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Button</span><span class="token punctuation" >></span></span>
+        <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>div</span> <span class="token attr-name" >className</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>mdl-layout-spacer<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>div</span><span class="token punctuation" >></span></span>
+        <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>Icon</span> <span class="token attr-name" >name</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>event<span class="token punctuation" >"</span></span> <span class="token punctuation" >/></span></span>
+    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>CardActions</span><span class="token punctuation" >></span></span>
+<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>Card</span><span class="token punctuation" >></span></span>
+</code><form class="codepen" action="http://codepen.io/pen/define" method="POST" target="_blank">
+<input type="hidden" name="data" value='{&​quot;title&​quot;:&​quot;React-MDL example&​quot;,&​quot;editors&​quot;:&​quot;001&​quot;,&​quot;html&​quot;:&​quot;<div id=\&​quot;demo\&​quot;></div>&​quot;,&​quot;css&​quot;:&​quot;@import url(https://fonts.googleapis.com/icon?family=Material+Icons);&​quot;,&​quot;js&​quot;:&​quot;// export the React MDL components globally to use them without the ReactMDL prefix\nfor(const component in ReactMDL) {\n    if(ReactMDL.hasOwnProperty(component)) {\n        window[component] = ReactMDL[component];\n    }\n}\n// for the dialog example, we have to register the dialogs window\nconst dialogs = document.querySelector(\&​quot;dialog\&​quot;); dialogs && dialogPolyfill.registerDialog(dialogs);\n\nconst Demo = (props) => (\n<Card shadow={0} style={{width: &apos;256px&apos;, height: &apos;256px&apos;, background: &apos;#3E4EB8&apos;}}>\n    <CardTitle expand style={{alignItems: &apos;flex-start&apos;, color: &apos;#fff&apos;}}>\n        <h4 style={{marginTop: &apos;0&apos;}}>\n            Featured event:<br />\n            May 24, 2016<br />\n            7-11pm\n        </h4>\n    </CardTitle>\n    <CardActions border style={{borderColor: &apos;rgba(255, 255, 255, 0.2)&apos;, display: &apos;flex&apos;, boxSizing: &apos;border-box&apos;, alignItems: &apos;center&apos;, color: &apos;#fff&apos;}}>\n        <Button colored style={{color: &apos;#fff&apos;}}>Add to Calendar</Button>\n        <div className=\&​quot;mdl-layout-spacer\&​quot;></div>\n        <Icon name=\&​quot;event\&​quot; />\n    </CardActions>\n</Card>\n\n);\nReactDOM.render(<Demo />, document.getElementById(&apos;demo&apos;))&​quot;,&​quot;js_pre_processor&​quot;:&​quot;babel&​quot;,&​quot;css_external&​quot;:&​quot;https://unpkg.com/react-mdl/extra/material.css;https://unpkg.com/dialog-polyfill/dialog-polyfill.css&​quot;,&​quot;js_external&​quot;:&​quot;https://unpkg.com/react/dist/react.js;https://unpkg.com/react-dom/dist/react-dom.js;https://unpkg.com/react-mdl/extra/material.js;https://unpkg.com/react-mdl/out/ReactMDL.js;https://unpkg.com/dialog-polyfill/dialog-polyfill.js&​quot;}'>
+<input type="image" src="http://s.cdpn.io/3/cp-arrow-right.svg" width="40" height="40" value="Create New Pen with Prefilled Data" class="codepen-mover-button">
+</form></pre><h2>Configuration</h2>
+<table class="mdl-data-table mdl-shadow--2dp">
+<thead>
+<tr>
+<th style="text-align:left">Prop</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Effect</th>
+<th style="text-align:left">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">border</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">Applies a border on top of the container</td>
+<td style="text-align:left">Optional. Works only with “CardActions”</td>
+</tr>
+<tr>
+<td style="text-align:left">expand</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">Expand the size to take the available space</td>
+<td style="text-align:left">Optional. Works only with “CardTitle”</td>
+</tr>
+<tr>
+<td style="text-align:left">shadow</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">Defines the shadow depth</td>
+<td style="text-align:left">Optional, Default 0. Must be between 0 and 6</td>
+</tr>
+</tbody>
+</table>
+</div></div></div></div></div></div></div></div></div></div><script src="/react-mdl/bundle.js"></script><script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-73434705-1', 'auto');
+ga('send', 'pageview');</script></body></html>
